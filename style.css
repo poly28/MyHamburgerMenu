@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 16px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 64px;
+}
+
+header .sp-menu {
+  margin-left: auto;
+}
+
+header .sp-menu #open {
+  font-size: 32px;
+  line-height: 64px;
+  cursor: pointer;
+}
+
+header .sp-menu #open.hide {
+  display: none;
+}
+
+main {
+  margin: 0 16px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay ul {
+  list-style: none;
+}
+
+.overlay ul li {
+  margin-top: 24px;
+  opacity: 0;
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+}
+
+.overlay.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.overlay.show li {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.overlay.show li:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.overlay.show li:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.pc-menu {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .pc-menu {
+    display: block;
+    margin-left: auto;
+  }
+  .pc-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .pc-menu ul li a {
+    display: block;
+    width: 80px;
+    line-height: 64px;
+    text-align: center;
+  }
+  .pc-menu ul li a:hover {
+    background-color: #f2f2f2;
+  }
+  .sp-menu {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
